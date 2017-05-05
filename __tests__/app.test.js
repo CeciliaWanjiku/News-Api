@@ -10,7 +10,7 @@ describe('App', () => {
             <App />
         );
         expect(
-            wrapper.containsMatchingElement(<img src="../img/logo.png" />)).toBe(true);
+            wrapper.contains(<img src="../img/logo.png" />)).toBe(true);
     })
     // it should contain a google+ sign in button
     it('should render a google sign in button', () => {
@@ -37,7 +37,7 @@ describe('App', () => {
     // testing if the story headline contains a title, description,url link and date it was published
     it('should render story headlines', () => {
         const wrapper = shallow(
-            <App />
+            <Sources />
         );
         expect(
             wrapper.containsMatchingElement(
@@ -54,7 +54,7 @@ describe('App', () => {
     })
     it('should render a list of sources', () => {
         const wrapper = shallow(
-            <App />
+            <Sources />
         );
         expect(
             wrapper.containsMatchingElement(
@@ -69,7 +69,7 @@ describe('App', () => {
     // filter by top stories
     it('should render top stories', () => {
         const wrapper = shallow(
-            <App />
+            <Sources />
         );
         expect(
             wrapper.containsMatchingElement(
@@ -85,7 +85,7 @@ describe('App', () => {
     // filters by latest
     it('should render latest stories', () => {
         const wrapper = shallow(
-            <App />
+            <Sources />
         );
         expect(
             wrapper.containsMatchingElement(
