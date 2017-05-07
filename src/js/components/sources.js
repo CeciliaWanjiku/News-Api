@@ -17,11 +17,16 @@ export default class Sources extends React.Component {
         })   
     }
 
-    render() {        
+    render() {    
         return(
             <div>
+        
                 {this.state.sources.map((sources)=> {
-                    return <div>{sources.name} <br /> {sources.description}</div>
+                    return( 
+                    <div key={sources.id}>
+                    <a href={sources.url} target="_blank" > {sources.name} </a>
+                    {sources.articles}
+                    </div>)
                 })}
            </div>
         );
