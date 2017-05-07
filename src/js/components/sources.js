@@ -22,12 +22,14 @@ export default class Sources extends React.Component {
             <div>
         
                 {this.state.sources.map((sources)=> {
+                    var url = "#/" + sources.id + "/" + sources.sortBysAvailable[0]
                     return( 
                     <div key={sources.id}>
-                    <a href={sources.url} target="_blank" > {sources.name} </a>
+                    <a href={url}> {sources.name} </a>
                     {sources.articles}
                     </div>)
                 })}
+                
            </div>
         );
     }

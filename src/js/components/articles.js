@@ -9,7 +9,11 @@ export default class Articles extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=213327409d384371851777e7c7f78dfe`) 
+        console.log('Inside Article component')
+        var url = `https://newsapi.org/v1/articles?source=source_id&sortBy=sort_by&apiKey=213327409d384371851777e7c7f78dfe`
+        .replace("source_id", this.props.params.source_id)
+        .replace('sort_by', this.props.params.sort_by)
+        axios.get(url) 
         .then((result) => {
             this.setState({
                 articles:result.data.articles
