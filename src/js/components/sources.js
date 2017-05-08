@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+require ('../stylesheets/components/style.css');
 
 export default class Sources extends React.Component {
     constructor() {

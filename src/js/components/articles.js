@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+require ('../stylesheets/components/style.css');
+
 
 export default class Articles extends React.Component {
     constructor() {
