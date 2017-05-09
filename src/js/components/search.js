@@ -7,7 +7,7 @@ export default class SourcesSearch extends React.Component {
         super();
         this.state = { 
           sources: [], 
-          search: 'find a source'
+          search: 'Find a source'
         };
     }
     updateSearch(event){
@@ -31,12 +31,21 @@ export default class SourcesSearch extends React.Component {
 
       } )     
         return(
-            <div>
+            <div className="search">
 
                 <input type= "text" value = {this.state.search} onChange={this.updateSearch.bind(this)}/>
 
                 {filteredSearch.map((sources)=> {
-                    return <div>{sources.name}</div>
+                    return <div>
+                        {this.state.sources.map((sources)=> {
+                    var url = "#/" + sources.id + "/" + sources.sortBysAvailable[0]
+                    return( 
+                    <div key={sources.id}>
+                    <a href={url}> {sources.name} </a>
+                    {sources.articles}
+                    </div>)
+                })}
+                    </div>
                 })}
 
            </div>

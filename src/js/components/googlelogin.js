@@ -14,7 +14,7 @@ class Login extends React.Component{
  
   render () {
     return (
-      <div>
+      <div className="login">
         <GoogleLogin socialId="yourClientID"
                      class="google-login"
                      scope="profile"

@@ -28,13 +28,11 @@ export default class Articles extends React.Component {
             <div className="container">
                 <div className="row">
                    <div className="articles">
-                       {this.props.params.sort_by == 'popular' && <h3>Popular Stories</h3> }
-                       {this.props.params.sort_by == 'latest' && <h3>Latest Stories</h3> }
-                       {this.props.params.sort_by == 'top' && <h3>Top Stories</h3> }
                 {this.state.articles.map((articles)=> {
                     return <div>
                         
                         <div>{articles.id}</div> 
+                    
                         <a href={articles.url} target="_blank" >{articles.title}</a>
                         <div>{articles.description}</div>
                          

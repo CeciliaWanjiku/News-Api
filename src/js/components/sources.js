@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+
 require ('../stylesheets/components/style.css');
 
 export default class Sources extends React.Component {
@@ -20,8 +21,7 @@ export default class Sources extends React.Component {
 
     render() {    
         return(
-            <div>
-        
+            <div className="sources col-md-3">
                 {this.state.sources.map((sources)=> {
                     var url = "#/" + sources.id + "/" + sources.sortBysAvailable[0]
                     return( 
