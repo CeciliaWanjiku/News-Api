@@ -14,9 +14,15 @@ export default class Sources extends React.Component {
         axios.get(`https://newsapi.org/v1/sources?language=en`) 
         .then((result) => {
             this.setState({
-                sources:result.data.sources
+                sources: result.data.sources
             });
-        })   
+            console.log(this.state);
+        }) 
+        .catch((error)=> {
+            this.setState({
+                error
+            });
+        });
     }
 
     render() {    
@@ -25,7 +31,7 @@ export default class Sources extends React.Component {
                 {this.state.sources.map((sources)=> {
                     var url = "#/" + sources.id + "/" + sources.sortBysAvailable[0]
                     return( 
-                    <div key={sources.id}>
+                    <div className="sources-data" key={sources.id}>
                     <a href={url}> {sources.name} </a>
                     {sources.articles}
                     </div>)
