@@ -14,12 +14,12 @@ import axios from 'axios';
        .then((result) => {
            this.setState({
                articles:result.data.articles
-            }).catch(
+            })
+        }).catch(
                 (error)=>{
                     console.log(error);
                 }
-            );
-        })   
+            );   
    }
 
     render() {        

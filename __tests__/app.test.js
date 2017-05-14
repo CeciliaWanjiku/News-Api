@@ -38,6 +38,7 @@ describe('Sources', () => {
       console.log(wrapper.find('sources-data'));
       expect(sources.length).toBeGreaterThanOrEqual(1);
     });
+    
     /*
         // tests to see if the logo is displaying
         it('should render a logo', () => {

@@ -12,9 +12,11 @@ import Home from './home.js';
 class App extends React.Component{
     
     render(){
+        
         return(
-            <Router>
+            <Router history={hashHistory}>
                 <Route exact path="/" component={Home}/>
+                 
                 <Route path="/:source_id/:sort_by" component={Articles} />
             </Router>
         )
