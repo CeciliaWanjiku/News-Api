@@ -33,7 +33,7 @@ export default class Sources extends React.Component {
                     return( 
                     <div className="sources-data" key={sources.id}>
                     <a href={url}> {sources.name} </a>
-                    {sources.articles}
+                      {sources.articles}
                     </div>)
                 })}
                 

@@ -9,11 +9,10 @@ export default class Articles extends React.Component {
         super();
         this.state = { articles: [] };
     }
-
-    componentDidMount() {
+    getArticles(source_id, sort_by) {
         var url = `https://newsapi.org/v1/articles?source=source_id&sortBy=sort_by&apiKey=213327409d384371851777e7c7f78dfe`
-            .replace("source_id", this.props.params.source_id)
-            .replace('sort_by', this.props.params.sort_by)
+            .replace("source_id", source_id)
+            .replace('sort_by', sort_by)
         axios.get(url)
             .then((result) => {
                 this.setState({
@@ -25,10 +24,20 @@ export default class Articles extends React.Component {
                 this.setState({
                     error
                 });
-            });
+            }); 
+
+    }
+
+    componentDidMount() {
+        this.getArticles(this.props.params.source_id, this.props.params.sort_by)
+    }
+    componentWillReceiveProps(nextProps) {
+        console.log("component did recieve props")
+        this.getArticles(nextProps.params.source_id, nextProps.params.sort_by)
     }
 
     render() {
+        console.log('afdso', this.props);
         return (
             <div className="container">
                 <div className="row">

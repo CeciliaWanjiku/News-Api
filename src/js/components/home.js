@@ -4,6 +4,9 @@ import Login from './googlelogin.js';
 import SourceSearch from './search.js';
 import Articles from './articles.js';
 import TopStories from './topstories.js';
+import Categories from './categories.js';
+
+
 import { Router, Route, hashHistory } from 'react-router';
 
 
@@ -16,7 +19,8 @@ class Home extends React.Component {
               <Login />
               <SourceSearch />
               <Sources />
-              <TopStories />
+              {this.props.children}
+              <Categories />
             </div>
 
         </div>

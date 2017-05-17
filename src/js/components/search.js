@@ -33,9 +33,8 @@ export default class SourcesSearch extends React.Component {
         console.log(filteredSearch)
         return (
             <div className="search">
-
+                
                 <input type="text" value={this.state.search} onChange={this.updateSearch.bind(this)} />
-
                 {filteredSearch.map((sources) => {
                     var url = "#/" + sources.id + "/" + sources.sortBysAvailable[0]
                     return (
