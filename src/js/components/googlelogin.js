@@ -13,10 +13,16 @@ class Login extends React.Component {
   }
 
   render() {
+    const clientId ='183978721876-rub1mcbdks8itvu3ckuupo70jo62v4e3.apps.googleusercontent.com';
+    this.clientId = clientId
+    const responseGoogle = (response) => {
+      user.login(response);
+      document.location.reload();
+    };
     return (
       <div className="login">
         <GoogleLogin
-          socialId="yourClientID"
+          socialId="183978721876-rub1mcbdks8itvu3ckuupo70jo62v4e3.apps.googleusercontent.com"
           class="google-login"
           scope="profile"
           responseHandler={this.responseGoogle}
