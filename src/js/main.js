@@ -6,6 +6,6 @@ import { Router, Route } from 'react-router'
 
 
 ReactDOM.render(
-    <App/>,
-     document.getElementById('main')
+  <App />,
+  document.getElementById('main')
 )

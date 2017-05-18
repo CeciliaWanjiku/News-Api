@@ -39,9 +39,7 @@ export default class Articles extends React.Component {
   render() {
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="articles">
+          <div className="articles col-md-8">
             {this.props.params.sort_by == 'popular' && <h3>Popular Stories</h3>}
             {this.props.params.sort_by == 'latest' && <h3>Latest Stories</h3>}
             {this.props.params.sort_by == 'top' && <h3>Top Stories</h3>}
@@ -55,9 +53,7 @@ export default class Articles extends React.Component {
 
               </div>
             })}
-          </div>
         </div>
-      </div>
     );
   }
 };
