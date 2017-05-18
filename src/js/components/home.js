@@ -14,11 +14,10 @@ class Home extends React.Component {
   render() {
     return (
       <div className="container">
-          <div className="row">
-              <img src="../../images/Screen Shot 2017-05-09 at 7.40.01 PM.png" />
-              <SourceSearch />
+        <div className="row">
               <Categories />
               {this.props.children}
+              <SourceSearch />
             </div>
 
         </div>
