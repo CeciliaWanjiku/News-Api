@@ -85,10 +85,11 @@ console.log("filter key", filterKey)
 console.log("filter value", filterValue)
 console.log("vvvv", sourcesToDisplay)
         return (
-            <div className="container">
+            <div className="col-md-2">
                 <select
                     className="form-control c-select mb-2"
                     name="filterKey"
+                    // style={{width: '15%'}}
                     onChange={this.handleFilterChange}
                     defaultValue={filterKey}
                 >
@@ -101,6 +102,7 @@ console.log("vvvv", sourcesToDisplay)
                 <select
                     className="form-control c-select"
                     name="filterValue"
+                    // style={{width: '15%'}}
                     onChange={this.handleFilterChange}
                     defaultValue={filterValue}
                 >
@@ -110,16 +112,14 @@ console.log("vvvv", sourcesToDisplay)
                         </option>
                     ))}
                 </select>
-                <div className="row">
+                <div>
                     {sourcesToDisplay.map((source) => {
                         var url = "#/" + source.id + "/" + source.sortBysAvailable[0]
                         return (
-                        <div className="card col-xs-12 col-sm-6 col-md-4 m-2" key={source.id}>
-                            <div className="card-block">
+                        <div key={source.id}>
 
                                 <a href={url} >{source.name}</a>
                                 {source.articles}
-                            </div>
                         </div>
                     )
 

@@ -4,12 +4,44 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
     <meta charset="UTF-8">
+    <img src="../src/images/logo.png" />
     <title>News App</title>
     <div id="login"></div>
     <div id="search"></div>
 </head>
 
 <body>
+    <div align="right">
+        <html>
+<head>
+  <meta name="google-signin-client_id" content="183978721876-rub1mcbdks8itvu3ckuupo70jo62v4e3.apps.googleusercontent.com">
+</head>
+<body>
+  <div id="my-signin2"></div>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 230,
+        'height': 40,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</body>
+</html>
+    </div>
     <div id="main"></div>
 
 

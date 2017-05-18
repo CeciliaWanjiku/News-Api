@@ -37,9 +37,8 @@ export default class Articles extends React.Component {
     }
 
     render() {
-        console.log('afdso', this.props);
         return (
-            <div className="container">
+            <div className="col-md-8">
                 <div className="row">
                     <div className="articles">
                         {this.props.params.sort_by == 'popular' && <h3>Popular Stories</h3>}

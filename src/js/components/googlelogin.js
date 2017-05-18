@@ -20,7 +20,7 @@ class Login extends React.Component {
       document.location.reload();
     };
     return (
-      <div className="login">
+      <div className="login" >
         <GoogleLogin
           socialId="183978721876-rub1mcbdks8itvu3ckuupo70jo62v4e3.apps.googleusercontent.com"
           class="google-login"
@@ -28,6 +28,7 @@ class Login extends React.Component {
           responseHandler={this.responseGoogle}
           buttonText="Login With Google"
         />
+        
       </div>
     );
   }

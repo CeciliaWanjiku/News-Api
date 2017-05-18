@@ -16,11 +16,9 @@ class Home extends React.Component {
       <div className="container">
           <div className="row">
               <img src="../../images/Screen Shot 2017-05-09 at 7.40.01 PM.png" />
-              <Login />
               <SourceSearch />
-              <Sources />
-              {this.props.children}
               <Categories />
+              {this.props.children}
             </div>
 
         </div>
