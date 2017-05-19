@@ -1,5 +1,7 @@
 const path = require ("path");
 
+const PORT = process.env.PORT || 8080;
+
 module.exports ={
     entry: "./src/js/main.js",
     output: {
@@ -10,6 +12,8 @@ module.exports ={
     devServer: {
         inline: true,
         contentBase:'./dist',
+        host: '0.0.0.0',
+        port: PORT,
     },
     module: {
         loaders: [
