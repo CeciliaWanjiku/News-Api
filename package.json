@@ -19,7 +19,10 @@
     ],
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "identity-obj-proxy"
-    }
+    },
+    "testPathIgnorePatterns": [
+      "./__tests__/jestsetup.js"
+    ]
   },
   "author": "",
   "license": "ISC",
