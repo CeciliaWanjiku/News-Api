@@ -34,14 +34,12 @@ export default class Categories extends Component {
 
   }
   getCategoriesValues() {
-    console.log('Current filter: ', this.state.currentFilter)
     const filterKey = this.state.currentFilter.filterKey;
     const filterValue = this.state.currentFilter.filterValue;
     var category_url = `https://newsapi.org/v1/sources?${filterKey}=${filterValue}`
     Axios
       .get(category_url)
       .then(({ data }) => {
-        console.log("data", data);
         this.setState((prevState) => (Object.assign({}, prevState, { sources: data.sources })
         ));
       });
@@ -50,11 +48,9 @@ export default class Categories extends Component {
   handleFilterChange(event) {
     const { name, value } = event.target;
     var stateCallback = () => {
-      console.log("State after category change: ", this.state)
       this.getCategoriesValues();
     }
     this.setState((prevState) => {
-      console.log("old", prevState.currentFilter)
       const newFilter = Object.assign({}, prevState.currentFilter, {
         [name]: value
       });
@@ -76,14 +72,10 @@ export default class Categories extends Component {
         filterValue
             }
         } = this.state;
-    console.log("this state", this.state)
 
     const sourcesToDisplay = sources.filter(source => {
       return source[filterKey] === filterValue;
     });
-    console.log("filter key", filterKey)
-    console.log("filter value", filterValue)
-    console.log("vvvv", sourcesToDisplay)
     return (
       <div className="col-md-2">
         <select
@@ -112,7 +104,7 @@ export default class Categories extends Component {
             </option>
           ))}
         </select>
-        <div>
+        <div className="cat-data">
           {sourcesToDisplay.map((source) => {
             var url = "#/" + source.id + "/" + source.sortBysAvailable[0]
             return (

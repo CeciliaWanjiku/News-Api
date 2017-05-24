@@ -16,7 +16,6 @@ export default class Sources extends React.Component {
         this.setState({
           sources: result.data.sources
         });
-        console.log(this.state);
       })
       .catch((error) => {
         this.setState({

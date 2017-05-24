@@ -12,6 +12,7 @@ export default class SourcesSearch extends React.Component {
   }
   updateSearch(event) {
     this.setState({ search: event.target.value });
+  
 
   }
 
@@ -30,7 +31,6 @@ export default class SourcesSearch extends React.Component {
         return sources.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
 
       })
-    console.log(filteredSearch)
     return (
       <div className="search">
 

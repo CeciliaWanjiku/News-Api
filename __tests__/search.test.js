@@ -1,8 +1,10 @@
 import React from 'react';
-import axios from 'axios';
 import { shallow, mount } from 'enzyme';
-import Sources from '../src/js/components/sources.js';
-const mockSources = {sources: [
+import Search from '../src/js/components/search.js';
+import { GoogleLogin } from 'react-google-login-component';
+
+const mockSources = {
+  sources: [
     {
       "id": "abc-news-au",
       "name": "ABC News (AU)",
@@ -16,21 +18,21 @@ const mockSources = {sources: [
         "medium": "",
         "large": ""
       },
-      
-      
       "sortBysAvailable": [
         "top"
-      ]},]}
-describe('Sources', () => {
-    // the array should have more than one source
-  it('the array should have more than one source', () => {
-      const wrapper = mount(
-          <Sources />,
-        );
-        wrapper.setState(mockSources)
-        wrapper.update();
-        const sources = wrapper.find('.sources-data')
-      wrapper.find('sources-data');
-      expect(sources.length).toBeGreaterThanOrEqual(1);
-    });
+      ]
+    },]
+}
+describe('Source Search', () => {
+  // the array should have more than one source
+  it('the search array should have more than one source', () => {
+    const wrapper = mount(
+      <Search />,
+    );
+    wrapper.setState(mockSources)
+    wrapper.update();
+    const sources = wrapper.find('.search')
+    wrapper.find('search');
+    expect(sources.length).toBeGreaterThanOrEqual(1);
+  });
 });

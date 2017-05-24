@@ -32,7 +32,6 @@ export default class Articles extends React.Component {
     this.getArticles(this.props.params.source_id, this.props.params.sort_by)
   }
   componentWillReceiveProps(nextProps) {
-    console.log("component did recieve props")
     this.getArticles(nextProps.params.source_id, nextProps.params.sort_by)
   }
 
