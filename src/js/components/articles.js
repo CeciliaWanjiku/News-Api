@@ -36,6 +36,7 @@ export default class Articles extends React.Component {
   }
 
   render() {
+    
 
     return (
           <div className="articles col-md-8">
@@ -43,12 +44,17 @@ export default class Articles extends React.Component {
             {this.props.params.sort_by == 'latest' && <h3>Latest Stories</h3>}
             {this.props.params.sort_by == 'top' && <h3>Top Stories</h3>}
             {this.state.articles.map((article, key) => {
+              const date = new Date(article.publishedAt).toString();
               return <div key={key}>
                 <div className="articles-data">{article.id}</div>
-                <a href={article.url} target="_blank" >{article.title}</a>
+                 <img src={article.urlToImage} height="300" width="500" />
+                 <br />
+                <h4><a href={article.url} target="_blank" >{article.title}</a></h4>
+               
                 <div>{article.description}</div>
 
-                <br /> {article.author}{article.publishedAt}
+                <br /> {article.author} <br />{date}
+               
 
               </div>
             })}
