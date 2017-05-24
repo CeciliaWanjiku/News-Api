@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "coveralls": "jest --coverage",
     "trial:test": "mocha --compilers js:babel-core/register --reporter progress __tests__/components.spec"
   },
   "jest": {
