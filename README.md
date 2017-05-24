@@ -1,5 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/CeciliaWanjiku/News-Api/badge.svg?branch=master)](https://coveralls.io/github/CeciliaWanjiku/News-Api?branch=master)
-
+[![Coverage Status](https://coveralls.io/repos/github/CeciliaWanjiku/News-Api/badge.svg?branch=develop)](https://coveralls.io/github/CeciliaWanjiku/News-Api?branch=develop)
 ## The Charge
 The charge is a news website, offering its readers various news articles from various news websites.It consumes the news API and renders the news to a formatted format. Its a one stop shop for news readers. Readers get to choose what they would like to read by browsing through the various categories and sources
 
