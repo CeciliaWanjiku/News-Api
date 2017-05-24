@@ -5,17 +5,15 @@ The charge is a news website, offering its readers various news articles from va
 
 ### Features
 
-Among the available features are:
+-Users can login to the application using Google+.
 
-Users can login to the application using Google+.
+-They then can search through a list of sources.
 
-They then can search through a list of sources.
+-They can Select sources and view headlines based on sources.
 
-They can Select sources and view headlines based on sources.
+-Sort through headlines for sources using the sort parameters provided in the API.
 
-Sort through headlines for sources using the sort parameters provided in the API.
-
-Click links to the original articles and be directed to them on a new tab.
+-Click links to the original articles and be directed to them on a new tab.
 
 ### Installation
     -Git clone the repo
