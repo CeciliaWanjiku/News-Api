@@ -3,7 +3,7 @@ const path = require ("path");
 const PORT = process.env.PORT || 8080;
 
 module.exports ={
-    entry: "./src/js/main.js",
+    entry: "./src/js/main.jsx",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: 'bundle.js',
@@ -19,7 +19,7 @@ module.exports ={
     module: {
         loaders: [
             {
-                test: /\.js?$/,
+                test: /\.jsx?$/,
                 exclude: /(node_modules|bowe_components)/,
                 loader: 'babel-loader',
                 query:{

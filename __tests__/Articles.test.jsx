@@ -1,9 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { shallow, mount } from 'enzyme';
-import sinon from 'sinon';
-
-import Articles from '../src/js/components/articles.js';
+import Articles from '../src/js/components/Articles.jsx';
 
 const mockArticles = {
   articles: [

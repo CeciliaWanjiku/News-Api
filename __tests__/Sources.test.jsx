@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { shallow, mount } from 'enzyme';
-import Sources from '../src/js/components/sources.js';
+import Sources from '../src/js/components/Sources.jsx';
+
 const mockSources = {sources: [
     {
       "id": "abc-news-au",

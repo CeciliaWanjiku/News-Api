@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Axios from 'axios';
 
-
-
-export default class Categories extends Component {
+export default class Categories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

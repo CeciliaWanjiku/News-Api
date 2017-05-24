@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Categories from '../src/js/components/categories.js';
+import Search from '../src/js/components/Search.jsx';
 import { GoogleLogin } from 'react-google-login-component';
+
 const mockSources = {
   sources: [
     {
@@ -22,23 +23,17 @@ const mockSources = {
       ]
     },]
 }
-describe('Categories', () => {
-  it('should render categories', () => {
-    const wrapper = shallow(
-      <Categories />
-    );
-    expect(
-      wrapper.containsMatchingElement(<div />)).toBe(true);
-  });
-  it('the array should have more than one source', () => {
+
+describe('Source Search', () => {
+  // the array should have more than one source
+  it('the search array should have more than one source', () => {
     const wrapper = mount(
-      <Categories />,
+      <Search />,
     );
     wrapper.setState(mockSources)
     wrapper.update();
-    const sources = wrapper.find('.cat-data')
-    wrapper.find('cat-data');
+    const sources = wrapper.find('.search')
+    wrapper.find('search');
     expect(sources.length).toBeGreaterThanOrEqual(1);
   });
-
 });

@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">63.64% </span>
+        <span class="strong">64% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>21/33</span>
+        <span class='fraction'>16/25</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>8/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">65.63% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>21/32</span>
+        <span class='fraction'>16/24</span>
       </div>
     </div>
   </div>
@@ -165,15 +165,7 @@
 120
 121
 122
-123
-124
-125
-126
-127
-128
-129
-130
-131</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+123</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -213,7 +205,20 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -223,18 +228,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -245,20 +238,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -339,14 +323,12 @@ export default class Categories extends Component {
 &nbsp;
   }
   getCategoriesValues() {
-    console.log('Current filter: ', this.state.currentFilter)
     const filterKey = this.state.currentFilter.filterKey;
     const filterValue = this.state.currentFilter.filterValue;
     var category_url = `https://newsapi.org/v1/sources?${filterKey}=${filterValue}`
     Axios
       .get(category_url)
       .then(<span class="fstat-no" title="function not covered" >({</span> data }) =&gt; {
-<span class="cstat-no" title="statement not covered" >        console.log("data", data);</span>
 <span class="cstat-no" title="statement not covered" >        this.setState(<span class="fstat-no" title="function not covered" >(p</span>revState) =&gt; (<span class="cstat-no" title="statement not covered" >Object.assign({}, prevState, { sources: data.sources })</span></span>
         ));
       });
@@ -355,11 +337,9 @@ export default class Categories extends Component {
 <span class="fstat-no" title="function not covered" >  ha</span>ndleFilterChange(event) {
     const { name, value } = <span class="cstat-no" title="statement not covered" >event.target;</span>
     var stateCallback = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      console.log("State after category change: ", this.state)</span>
 <span class="cstat-no" title="statement not covered" >      this.getCategoriesValues();</span>
     }
 <span class="cstat-no" title="statement not covered" >    this.setState(<span class="fstat-no" title="function not covered" >(p</span>revState) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      console.log("old", prevState.currentFilter)</span>
       const newFilter = <span class="cstat-no" title="statement not covered" >Object.assign({}, prevState.currentFilter, {</span>
         [name]: value
       });
@@ -381,14 +361,10 @@ export default class Categories extends Component {
         filterValue
             }
         } = this.state;
-    console.log("this state", this.state)
 &nbsp;
     const sourcesToDisplay = sources.filter(source =&gt; {
       return source[filterKey] === filterValue;
     });
-    console.log("filter key", filterKey)
-    console.log("filter value", filterValue)
-    console.log("vvvv", sourcesToDisplay)
     return (
       &lt;div className="col-md-2"&gt;
         &lt;select
@@ -439,7 +415,7 @@ export default class Categories extends Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 24 2017 12:08:27 GMT+0300 (EAT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 24 2017 17:06:37 GMT+0300 (EAT)
 </div>
 </div>
 <script src="prettify.js"></script>

@@ -1,12 +1,8 @@
 import React from 'react';
-import SourceSearch from './search.js';
-import Categories from './categories.js';
+import SourceSearch from './Search.jsx';
+import Categories from './Categories.jsx';
 
-
-import { Router, Route, hashHistory } from 'react-router';
-
-
-class Home extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
       <div className="container">
@@ -20,4 +16,3 @@ class Home extends React.Component {
     );
   }
 }
-export default Home;

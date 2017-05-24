@@ -1,16 +1,10 @@
 import React from 'react';
-import Articles from './articles.js';
-import Home from './home.js';
+import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import Articles from './Articles.jsx';
+import Home from './Home.jsx';
 
-import { Router, Route, hashHistory } from 'react-router'
-
-
-
-
-class App extends React.Component {
-
+export default class App extends React.Component {
   render() {
-
     return (
       <Router history={hashHistory}>
         <Route exact path="/" component={Home}>
@@ -21,6 +15,3 @@ class App extends React.Component {
     )
   }
 }
-export default App;
-
-

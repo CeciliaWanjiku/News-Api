@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "test": "jest",
     "test:watch": "jest --watch",
-    "coveralls": "jest --coverage",
+    "coveralls": "./node_modules/.bin/coveralls  < coverage/lcov.info",
     "trial:test": "mocha --compilers js:babel-core/register --reporter progress __tests__/components.spec"
   },
   "jest": {
@@ -60,6 +60,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "chai": "^3.5.0",
+    "coveralls": "^2.13.1",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
     "eslint": "^3.19.0",
