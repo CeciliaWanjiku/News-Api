@@ -12,7 +12,7 @@
   },
   "jest": {
     "setupFiles": [
-      "./__tests__/jestsetup.js"
+      "./__tests__/Jestsetup.jsx"
     ],
     "snapshotSerializers": [
       "<rootDir>/node_modules/enzyme-to-json/serializer"
@@ -21,7 +21,7 @@
       "^.+\\.(css|scss)$": "identity-obj-proxy"
     },
     "testPathIgnorePatterns": [
-      "./__tests__/jestsetup.js"
+      "./__tests__/Jestsetup.jsx"
     ]
   },
   "author": "",

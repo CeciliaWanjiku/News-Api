@@ -1,5 +1,5 @@
 import React from 'react';
-import SourceSearch from './Search.jsx';
+import SourcesSearch from './SourcesSearch.jsx';
 import Categories from './Categories.jsx';
 
 export default class Home extends React.Component {
@@ -9,7 +9,7 @@ export default class Home extends React.Component {
         <div className="row">
               <Categories />
               {this.props.children}
-              <SourceSearch />
+              <SourcesSearch />
             </div>
 
         </div>

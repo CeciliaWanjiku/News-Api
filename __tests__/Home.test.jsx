@@ -1,17 +1,16 @@
 import React from 'react';
-import axios from 'axios';
 import { shallow, mount } from 'enzyme';
 import Home from '../src/js/components/Home.jsx';
-import SourceSearch from '../src/js/components/Search.jsx';
+import SourcesSearch from '../src/js/components/SourcesSearch.jsx';
 
 describe('Home', () => {
- // it should render a search button
-  it('should render a search button', () => {
+ // it should render a search bar
+  it('should render a search bar', () => {
     const wrapper = shallow(
       <Home />
     );
     expect(
-      wrapper.containsMatchingElement(<SourceSearch />)).toBe(true);
+      wrapper.containsMatchingElement(<SourcesSearch />)).toBe(true);
   })
 
 });

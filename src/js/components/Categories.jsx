@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 export default class Categories extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ export default class Categories extends React.Component {
     const filterKey = this.state.currentFilter.filterKey;
     const filterValue = this.state.currentFilter.filterValue;
     var category_url = `https://newsapi.org/v1/sources?${filterKey}=${filterValue}`
-    Axios
+    axios
       .get(category_url)
       .then(({ data }) => {
         this.setState((prevState) => (Object.assign({}, prevState, { sources: data.sources })

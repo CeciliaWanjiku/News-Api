@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Categories from '../src/js/components/Categories.jsx';
-import { GoogleLogin } from 'react-google-login-component';
 
 const mockSources = {
   sources: [

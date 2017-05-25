@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { shallow, mount } from 'enzyme';
 import Articles from '../src/js/components/Articles.jsx';
 

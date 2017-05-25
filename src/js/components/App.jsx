@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import { Router, Route, hashHistory} from 'react-router'
 import Articles from './Articles.jsx';
 import Home from './Home.jsx';
 

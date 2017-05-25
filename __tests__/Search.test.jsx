@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Search from '../src/js/components/Search.jsx';
-import { GoogleLogin } from 'react-google-login-component';
+import SourcesSearch from '../src/js/components/SourcesSearch.jsx';
 
 const mockSources = {
   sources: [
@@ -28,7 +27,7 @@ describe('Source Search', () => {
   // the array should have more than one source
   it('the search array should have more than one source', () => {
     const wrapper = mount(
-      <Search />,
+      <SourcesSearch />,
     );
     wrapper.setState(mockSources)
     wrapper.update();
